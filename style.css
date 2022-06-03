@@ -18,6 +18,7 @@ header {
 
 header > p {
     font-family: 'Montserrat', sans-serif;
+    margin-left: -50px;
     transition: 0.2s;
 }
 

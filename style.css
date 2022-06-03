@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    flex-grow: 4;
+    gap: 180px;
+    align-items: center;
+}
+
+header > p {
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s;
+}
+
+header > p:hover {
+    color: #F2B705;
+}
+
+header > img {
+    width: 250px;
+}
+
+.na-topie {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    gap: 100px;
+    background: rgb(249,186,0);
+    background: -moz-linear-gradient(180deg, rgba(249,186,0,1) 0%, rgba(255,192,0,1) 21%);
+    background: -webkit-linear-gradient(180deg, rgba(249,186,0,1) 0%, rgba(255,192,0,1) 21%);
+    background: linear-gradient(180deg, rgba(249,186,0,1) 0%, rgba(255,192,0,1) 21%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9ba00",endColorstr="#ffc000",GradientType=1);
+}
+
+.jordan_top {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.introduce-jordan {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: 400px;
+    font-size: 40px;
+}
+
+.introduce-jordan > hr {
+    width: 200px;
+    float: left;
+    border: solid;
+}
+
+.introduce-jordan_natopie {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.jordan_top > img {
+    margin-left: 60px;
+}
+
+.kup {
+    color: white;
+    background-color: red;
+    padding: 12px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 60px;
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 1020px) {
+    .na-topie {
+        background: url(images/bg_1500wdth.jpg);
+        flex-flow: column;
+    }
+
+    .introduce-jordan {
+        margin-top: 50px;
+        margin-left: 0px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .introduce-jordan > hr {
+        margin-left: 100px;
+    }
+
+    .jordan_top > img {
+        display: none;
+    }
+}

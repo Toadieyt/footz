@@ -91,6 +91,19 @@ header > img {
     font-size: 30px;
     margin-bottom: 50px;
     font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+
+.kup:hover {
+  color: red;
+  background-color: white;
+  padding: 12px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-radius: 60px;
+  font-size: 30px;
+  margin-bottom: 50px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 1020px) {

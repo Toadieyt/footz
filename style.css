@@ -8,11 +8,13 @@ body {
 header {
     display: flex;
     background-color: white;
+    height: 100px;
     width: 100%;
     justify-content: flex-start;
     flex-flow: row wrap;
     flex-grow: 4;
     gap: 180px;
+    position: fixed;
     align-items: center;
 }
 
@@ -47,6 +49,7 @@ main {
 
 .na-topie {
     display: flex;
+    margin-top: 100px;
     width: 100%;
     justify-content: center;
     flex-flow: column;

@@ -36,6 +36,15 @@ header > img {
     display: none;
 }
 
+/*----------------------*/
+
+main { 
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
 .na-topie {
     display: flex;
     width: 100%;
@@ -50,7 +59,21 @@ header > img {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9ba00",endColorstr="#ffc000",GradientType=1);
 }
 
-.jordan_top {
+.na-lato {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  gap: 100px;
+  background: rgb(93,217,0);
+  background: -moz-linear-gradient(180deg, rgba(93,217,0,1) 0%, rgba(100,223,0,1) 21%, rgba(97,218,0,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(93,217,0,1) 0%, rgba(100,223,0,1) 21%, rgba(97,218,0,1) 100%);
+  background: linear-gradient(180deg, rgba(93,217,0,1) 0%, rgba(100,223,0,1) 21%, rgba(97,218,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5dd900",endColorstr="#61da00",GradientType=1);
+}
+
+.categories {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -59,25 +82,31 @@ header > img {
     margin-top: 50px;
 }
 
-.introduce-jordan {
+.introduce-categories {
     font-family: 'Montserrat', sans-serif;
     color: white;
     width: 400px;
     font-size: 40px;
 }
 
-.introduce-jordan > hr {
+.introduce-categories > hr {
     width: 200px;
     float: left;
     border: solid;
 }
 
-.introduce-jordan_natopie {
+.introduce-categories_title {
     font-size: 60px;
     font-weight: 600;
 }
 
-.jordan_top > img {
+.introduce-categories_na-topie {
+  color: red;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.categories > img {
     margin-left: 60px;
 }
 
@@ -280,18 +309,23 @@ header > img {
         flex-flow: column;
     }
 
-    .introduce-jordan {
+    .na-lato {
+        background: url(images/bg_lato_1280wdth.jpg);
+        flex-flow: column;
+    }
+
+    .introduce-categories {
         margin-top: 50px;
         margin-left: 0px;
         margin-bottom: 50px;
         text-align: center;
     }
 
-    .introduce-jordan > hr {
+    .introduce-categories > hr {
         margin-left: 100px;
     }
 
-    .jordan_top > img {
+    .categories > img {
         display: none;
     }
 }

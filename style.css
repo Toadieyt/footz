@@ -224,6 +224,9 @@ footer a:hover {
         background: #000;
         transition: all 0.6s ease-in-out;
       }
+      .wrapper > ul > img {
+        width: 400px;
+      }
       #active:checked ~ .wrapper{
         /*left: 0;*/
         right:0;
@@ -282,23 +285,32 @@ footer a:hover {
       }
       .wrapper ul{
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 50%;
-        height: 90%;
+        height: 80%;
         transform: translate(-50%, -50%);
         list-style: none;
         text-align: center;
       }
       .wrapper ul li{
+        width: 800px;
         height: 10%;
         margin: 15px 0;
+      }
+      .menu-categories-natopie {
+        color: rgb(249,186,0);
+      }
+      .menu-categories-nalato {
+        color: rgb(93,217,0);
+      }
+      .menu-categories-dobiegania {
+        color: rgb(87,87,87);
       }
       .wrapper ul li a{
         text-decoration: none;
         font-size: 30px;
         font-weight: 500;
         padding: 5px 30px;
-        color: #fff;
         border-radius: 50px;
         position: absolute;
         line-height: 50px;
@@ -306,6 +318,9 @@ footer a:hover {
         opacity: 0;
         transition: all 0.3s ease;
         transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      .wrapper ul li a:not(.menu-categories-natopie, .menu-categories-nalato, .menu-categories-dobiegania){
+        color: white;
       }
       .wrapper ul li a:after{
         position: absolute;

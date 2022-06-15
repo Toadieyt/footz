@@ -160,7 +160,6 @@ main {
   align-items: center;
   font-family: 'Roboto Condensed', sans-serif;
   background-color: whitesmoke;
-  box-shadow: 0px 0px 50px rgba(0,0,0,0.1);
   border-radius: 5%;
   height: 300px;
   width: 300px;
@@ -168,7 +167,11 @@ main {
 }
 
 .div-categories:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.models {
+  font-size: 12px;
 }
 
 .div-categories > img {

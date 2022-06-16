@@ -89,6 +89,21 @@ main {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5dd900",endColorstr="#61da00",GradientType=1);
 }
 
+.na-lato_hd {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: -100px;
+  width: 100%;
+  height: 150px;
+  font-size: 60px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background: url(images/bg_lato_1280wdth.jpg);
+}
+
 .do-biegania {
   display: flex;
   width: 100%;
@@ -189,18 +204,18 @@ main {
   border-radius: 100px;
   font-size: 23px;
   font-family: 'Montserrat', sans-serif;
-  transition: 0.3s;
+  transition: 0.2s;
   text-decoration: none;
   box-shadow: 0px 0px 30px rgba(0,0,0,0.05);
 }
 
 .kup-text {
-  color: white;
+  color: whitesmoke;
 }
 
 .kup:hover {
   color: red;
-  background-color: white;
+  background-color: whitesmoke;
   padding: 5px;
   padding-left: 50px;
   border-radius: 100px;

@@ -75,6 +75,10 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9ba00",endColorstr="#ffc000",GradientType=1);
 }
 
+.na-topie_hd {
+  background: url(images/bg_hd_na-topie.jpg);
+}
+
 .na-lato {
   display: flex;
   width: 100%;
@@ -90,18 +94,7 @@ main {
 }
 
 .na-lato_hd {
-  display: flex;
-  margin-top: 100px;
-  margin-bottom: -100px;
-  width: 100%;
-  height: 150px;
-  font-size: 60px;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  background: url(images/bg_lato_1280wdth.jpg);
+  background: url(images/bg_hd_lato.jpg);
 }
 
 .do-biegania {
@@ -118,13 +111,30 @@ main {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#575757",endColorstr="#6a6a6a",GradientType=1);
 }
 
+.do-biegania_hd {
+  background: url(images/bg_hd_do-biegania.jpg);
+}
+
+.na-topie_hd, .na-lato_hd, .do-biegania_hd {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: -100px;
+  width: 100%;
+  height: 150px;
+  font-size: 60px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
 .categories {
     display: flex;
     width: 100%;
     justify-content: center;
     flex-flow: row wrap;
     align-items: center;
-    margin-top: 50px;
 }
 
 .introduce-categories {
@@ -297,10 +307,6 @@ footer a:hover {
     header > img {
       width: 200px;
       padding: 2px;
-    }
-
-    .introduce-categories {
-      font-size: 31px;
     }
 
     /*-------------------------------*/
@@ -496,6 +502,7 @@ footer a:hover {
         margin-top: 50px;
         margin-left: 0px;
         margin-bottom: 50px;
+        font-size: 31px;
         text-align: center;
     }
 
@@ -505,5 +512,25 @@ footer a:hover {
 
     .categories > img {
         display: none;
+    }
+
+    .main-div-categories {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .div-categories {
+      height: 420px;
+      width: 420px;
+      font-size: 150%;
+    }
+
+    .div-categories > img {
+      height: 210px;
+      width: 420px;
+    }
+
+    .models {
+      font-size: 70%;
     }
 }

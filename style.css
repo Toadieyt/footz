@@ -28,7 +28,6 @@ header {
     gap: 180px;
     position: fixed;
     align-items: center;
-    z-index: 2;
 }
 
 header > a {
@@ -62,7 +61,7 @@ main {
 
 .na-topie {
     display: flex;
-    padding-top: 180px;
+    padding-top: 40px;
     width: 100%;
     justify-content: center;
     flex-flow: column;
@@ -271,7 +270,6 @@ footer {
   background-color: white;
   display: flex;
   justify-content: center;
-  z-index: 2;
 }
 
 footer .autor {

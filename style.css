@@ -62,7 +62,7 @@ main {
 
 .na-topie {
     display: flex;
-    padding-top: 100px;
+    padding-top: 180px;
     width: 100%;
     justify-content: center;
     flex-flow: column;

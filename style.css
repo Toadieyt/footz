@@ -10,11 +10,6 @@ body {
     padding:0;
     box-sizing: border-box;
     background-color: white;
-    background: rgb(238,238,238);
-    background: -moz-linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 46%, rgba(237,237,237,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 46%, rgba(237,237,237,1) 100%);
-    background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 46%, rgba(237,237,237,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee",endColorstr="#ededed",GradientType=1);
 }
 
 header {
@@ -28,27 +23,48 @@ header {
     gap: 180px;
     position: fixed;
     align-items: center;
+    border-bottom: solid rgb(150,0,205);
     z-index: 2;
 }
 
-header > a {
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    text-decoration: none;
-    transition: 0.2s;
+.first-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15%;
 }
 
-header > a:hover {
-    color: #F2B705;
-}
-
-header > img:not(.logos) {
+.first-header > a > img {
     width: 150px;
     padding: 15px;
 }
 
 #active, .menu-btn, .close, .wrapper {
     display: none;
+}
+
+.underline-text {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  color: rgb(150,0,205);
+  text-decoration: none;
+}
+
+.underline-text::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 110%;
+  height: 2px;
+  bottom: -3px;
+  right: -4px;
+  background-color: rgb(150,0,205);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.underline-text:hover::before {
+  transform: scaleX(1);
 }
 
 .logos {
@@ -87,7 +103,7 @@ main {
 }
 
 .search[type=text]:focus {
-  outline: solid #F2B705;
+  outline: solid rgb(150,0,205);
 }
 
 .contact {
@@ -98,7 +114,7 @@ main {
 }
 
 .contact > textarea {
-  border: solid #F2B705;
+  border: solid rgb(150,0,205);
   font-family: 'Montserrat', sans-serif;
   padding: 30px;
   border-radius: 50px;
@@ -106,7 +122,7 @@ main {
 }
 
 .contact > textarea:focus {
-  outline: #F2B705;
+  outline: rgb(150,0,205);
   transform: scale(1.03);
 }
 
@@ -131,17 +147,12 @@ main {
 
 .na-topie {
     display: flex;
-    padding-top: 40px;
     width: 100%;
     justify-content: center;
     flex-flow: column;
     align-items: center;
     gap: 100px;
-    background: rgb(249,186,0);
-    background: -moz-linear-gradient(180deg, rgba(249,186,0,1) 0%, rgba(255,192,0,1) 21%);
-    background: -webkit-linear-gradient(180deg, rgba(249,186,0,1) 0%, rgba(255,192,0,1) 21%);
-    background: linear-gradient(180deg, rgba(249,186,0,1) 0%, rgba(255,192,0,1) 21%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9ba00",endColorstr="#ffc000",GradientType=1);
+    background: white;
 }
 
 .na-topie_hd {
@@ -206,11 +217,18 @@ main {
     align-items: center;
 }
 
-.introduce-categories {
+.introduce-categories:not(.na-topie > .introduce-categories) {
     font-family: 'Montserrat', sans-serif;
     color: white;
     width: 400px;
     font-size: 40px;
+}
+
+.na-topie > .categories > .introduce-categories {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  width: 400px;
+  font-size: 40px;
 }
 
 .introduce-categories > hr {
@@ -302,7 +320,7 @@ main {
 
 .zobacz {
   font-size: 0px;
-  color: red;
+  color: rgb(150,0,205);
   background-color: white;
   padding: 8px;
   margin-bottom: 50px;
@@ -320,7 +338,7 @@ main {
 .zobacz:hover {
   display: flex;
   color: white;
-  background-color: red;
+  background-color: rgb(150,0,205);
   padding: 8px;
   padding-left: 30px;
   padding-right: 30px;
@@ -341,6 +359,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: solid rgb(150,0,205);
+  z-index: 2;
 }
 
 footer .autor {
@@ -355,10 +375,6 @@ footer a {
   text-decoration: none;
   margin: 50px;
   transition: all 0.3s ease;
-}
-
-footer a:hover {
-  color: #F2B705;;
 }
 
 /*----------RESPONSIVE------------*/
@@ -376,6 +392,10 @@ footer a:hover {
     header > img {
       width: 200px;
       padding: 2px;
+    }
+
+    .first-header {
+      width: 30%;
     }
 
     .search {
@@ -482,7 +502,7 @@ footer a:hover {
         height: 10%;
       }
       .menu-categories-natopie {
-        color: rgb(249,186,0);
+        color: red;
       }
       .menu-categories-nalato {
         color: rgb(93,217,0);
@@ -523,7 +543,7 @@ footer a:hover {
         transform: scaleY(1);
       }
       .wrapper > ul > li > a:hover{
-        color: #F2B705;
+        color: rgb(150,0,205);;
       }
       input[type="checkbox"]{
         display: none;

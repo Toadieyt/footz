@@ -14,16 +14,15 @@ body {
 
 header {
     display: flex;
-    background-color: white;
-    height: 100px;
+    background: none;
+    height: 130px;
     width: 100%;
     justify-content: space-between;
     flex-flow: row wrap;
     flex-grow: 4;
     gap: 180px;
-    position: fixed;
+    position: absolute;
     align-items: center;
-    border-bottom: solid rgb(150,0,205);
     z-index: 2;
 }
 
@@ -31,7 +30,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 15%;
+  margin-left: 20px;
+  width: 30%;
 }
 
 .first-header > a > img {
@@ -46,7 +46,7 @@ header {
 .underline-text {
   font-family: 'Montserrat', sans-serif;
   position: relative;
-  color: rgb(150,0,205);
+  color: rgb(220,0,255);
   text-decoration: none;
 }
 
@@ -56,9 +56,9 @@ header {
   display: block;
   width: 110%;
   height: 2px;
-  bottom: -3px;
+  bottom: -2px;
   right: -4px;
-  background-color: rgb(150,0,205);
+  background-color: rgb(220,0,255);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -71,8 +71,13 @@ header {
   margin-right: 20px;
 }
 
-.logos > a {
+.logos > a > img {
   margin-right: 30px;
+  transition: 1s;
+}
+
+.logos > a > img:hover {
+  transform: scale(1.1);
 }
 
 /*----------MAIN------------*/
@@ -103,7 +108,7 @@ main {
 }
 
 .search[type=text]:focus {
-  outline: solid rgb(150,0,205);
+  outline: solid rgb(220,0,255);
 }
 
 .contact {
@@ -114,7 +119,8 @@ main {
 }
 
 .contact > textarea {
-  border: solid rgb(150,0,205);
+  border: solid rgb(220,0,255);
+  background-color: rgba(129,129,129,0.1);
   font-family: 'Montserrat', sans-serif;
   padding: 30px;
   border-radius: 50px;
@@ -122,13 +128,15 @@ main {
 }
 
 .contact > textarea:focus {
-  outline: rgb(150,0,205);
+  outline: rgb(220,0,255);
   transform: scale(1.03);
 }
 
 .contact > button {
   font-size: large;
   margin-top: 20px;
+  padding: 5px;
+  border-radius: 5px;
   position: relative;
   border: none;
   font-family: 'Montserrat', sans-serif;
@@ -152,7 +160,7 @@ main {
     flex-flow: column;
     align-items: center;
     gap: 100px;
-    background: white;
+    background: url(images/index-bg-top.jpg);
 }
 
 .na-topie_hd {
@@ -197,10 +205,10 @@ main {
 
 .na-topie_hd, .na-lato_hd, .do-biegania_hd {
   display: flex;
-  margin-top: 100px;
+  margin-top: 130px;
   margin-bottom: -100px;
   width: 100%;
-  height: 150px;
+  height: 110px;
   font-size: 60px;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
@@ -243,7 +251,7 @@ main {
 }
 
 .introduce-categories_na-topie {
-  color: red;
+  color: rgb(220,0,255);
   font-size: 60px;
   font-weight: 600;
 }
@@ -320,7 +328,7 @@ main {
 
 .zobacz {
   font-size: 0px;
-  color: rgb(150,0,205);
+  color: rgb(220,0,255);
   background-color: white;
   padding: 8px;
   margin-bottom: 50px;
@@ -338,7 +346,7 @@ main {
 .zobacz:hover {
   display: flex;
   color: white;
-  background-color: rgb(150,0,205);
+  background-color: rgb(220,0,255);
   padding: 8px;
   padding-left: 30px;
   padding-right: 30px;
@@ -359,7 +367,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: solid rgb(150,0,205);
+  border-top: solid rgb(220,0,255);
   z-index: 2;
 }
 
@@ -398,6 +406,10 @@ footer a {
       width: 30%;
     }
 
+    .first-header > a:not(.first-header > a:first-child) {
+      display: none;
+    }
+
     .search {
       width: 400px;
       height: 80px;
@@ -416,7 +428,8 @@ footer a {
         box-sizing: border-box;
         font-family: 'Montserrat', sans-serif;
       }
-      .wrapper{
+
+      .wrapper {
         position: fixed;
         top: 0;
         /*left: -100%;*/
@@ -427,16 +440,18 @@ footer a {
         background: #000;
         transition: all 0.6s ease-in-out;
       }
+
       .wrapper > img {
         margin-top: 80px;
         height: 180px;
         width: 400px;
       }
-      #active:checked ~ .wrapper{
-        /*left: 0;*/
+
+      #active:checked ~ .wrapper {
         right:0;
       }
-      .menu-btn{
+
+      .menu-btn {
         position: absolute;
         z-index: 2;
         right: 20px;
@@ -451,9 +466,8 @@ footer a {
         cursor: pointer;
         transition: all 0.3s ease-in-out;
       }
-      .menu-btn > span,
-      .menu-btn:before,
-      .menu-btn:after{
+
+      .menu-btn > span, .menu-btn:before, .menu-btn:after {
           content: "";
           position: absolute;
           top: calc(50% - 1px);
@@ -462,10 +476,12 @@ footer a {
           border-bottom: 2px solid #000;
           transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
-      .menu-btn:before{
+
+      .menu-btn:before {
         transform: translateY(-8px);
       }
-      .menu-btn:after{
+
+      .menu-btn:after {
         transform: translateY(8px);
       }
       
@@ -480,15 +496,18 @@ footer a {
       #active:checked + .menu-btn span {
           transform: scaleX(0);
       }
+
       #active:checked + .menu-btn:before {
           transform: rotate(45deg);
         border-color: #fff;
       }
+
       #active:checked + .menu-btn:after {
           transform: rotate(-45deg);
         border-color: #fff;
       }
-      .wrapper > ul{
+
+      .wrapper > ul {
         position: absolute;
         top: 58%;
         left: 46%;
@@ -497,20 +516,13 @@ footer a {
         list-style: none;
         text-align: center;
       }
-      .wrapper > ul > li{
+
+      .wrapper > ul > li {
         width: 800px;
         height: 10%;
       }
-      .menu-categories-natopie {
-        color: red;
-      }
-      .menu-categories-nalato {
-        color: rgb(93,217,0);
-      }
-      .menu-categories-dobiegania {
-        color: rgb(87,87,87);
-      }
-      .wrapper > ul > li > a{
+
+      .wrapper > ul > li > a {
         text-decoration: none;
         font-size: 30px;
         font-weight: 500;
@@ -523,31 +535,35 @@ footer a {
         transition: all 0.3s ease;
         transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
-      .wrapper > ul > li > a:not(.menu-categories-natopie, .menu-categories-nalato, .menu-categories-dobiegania){
+
+      .underline-text-sec {
+        font-family: 'Montserrat', sans-serif;
+        position: relative;
         color: white;
+        text-decoration: none;
       }
-      .wrapper > ul > li > a:after{
-        position: absolute;
+      
+      .underline-text-sec::before {
         content: "";
-        background: #fff;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        border-radius: 30px;
-        transform: scaleY(0);
-        z-index: -1;
+        position: absolute;
+        display: block;
+        width: 110%;
+        height: 2px;
+        bottom: -2px;
+        right: -4px;
+        background-color: white;
+        transform: scaleX(0);
         transition: transform 0.3s ease;
       }
-      .wrapper > ul > li > a:hover:after{
-        transform: scaleY(1);
+      
+      .underline-text-sec:hover::before {
+        transform: scaleX(1);
       }
-      .wrapper > ul > li > a:hover{
-        color: rgb(150,0,205);;
-      }
+
       input[type="checkbox"]{
         display: none;
       }
+
       .content{
         position: absolute;
         top: 50%;
@@ -558,10 +574,12 @@ footer a {
         width: 100%;
         color: #202020;
       }
+
       .content > .title{
         font-size: 40px;
         font-weight: 700;
       }
+
       .content > p{
         font-size: 35px;
         font-weight: 600;
@@ -570,10 +588,12 @@ footer a {
       #active:checked ~ .wrapper > ul > li > a{
         opacity: 1;
       }
+
       .wrapper > ul > li > a{
         transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
         transform: translateX(100px);
       }
+
       #active:checked ~ .wrapper > ul > li > a{
           transform: none;
           transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1);
@@ -582,6 +602,11 @@ footer a {
       }
 
     /*-------------------------------*/
+
+    .contact {
+      margin-top: 300px;
+      transform: scale(1.3);
+    }
 
     .na-topie {
         background: url(images/bg_na-topie_1280wdth.jpg);

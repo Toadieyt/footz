@@ -167,6 +167,23 @@ main {
   background: url(images/bg_hd_na-topie.jpg);
 }
 
+.nowosc {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: center;
+  background-color: whitesmoke;
+  border: solid 5px red;
+}
+
+.nowosc > div {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .na-lato {
   display: flex;
   width: 100%;
@@ -239,10 +256,14 @@ main {
   font-size: 40px;
 }
 
+.na-topie .introduce-categories > hr {
+    color: rgb(220,0,255);
+}
+
 .introduce-categories > hr {
-    width: 200px;
-    float: left;
-    border: solid;
+  width: 200px;
+  float: left;
+  border: solid;
 }
 
 .introduce-categories_title {
@@ -254,6 +275,38 @@ main {
   color: rgb(220,0,255);
   font-size: 60px;
   font-weight: 600;
+}
+
+.nowosc  > div > .zobacz {
+  margin-top: 100px;
+  color: red;
+}
+
+.nowosc > div > .zobacz:hover {
+  color: white;
+  background-color: red;
+}
+
+.nowosc-text1, .nowosc-text2 {
+  color: red;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.nowosc-text1 {
+  display: none;
+}
+
+.nowosc > div > p:not(.nowosc .models) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 150%;
+}
+
+.nowosc .models {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70%;
 }
 
 .categories > img {
@@ -331,12 +384,15 @@ main {
   color: rgb(220,0,255);
   background-color: white;
   padding: 8px;
-  margin-bottom: 50px;
   border-radius: 100px;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   transition: 0.2s;
   box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+}
+
+.zobacz:not(.nowosc .zobacz) { 
+  margin-bottom: 50px;
 }
 
 .zobacz-text {
@@ -556,6 +612,10 @@ footer a {
         transition: transform 0.3s ease;
       }
       
+      .underline-text-sec:first-child::before {
+        background-color: red;
+      }
+
       .underline-text-sec:hover::before {
         transform: scaleX(1);
       }
@@ -611,6 +671,27 @@ footer a {
     .na-topie {
         background: url(images/bg_na-topie_1280wdth.jpg);
         flex-flow: column;
+    }
+
+    .nowosc {
+      flex-flow: column wrap;
+    }
+
+    .nowosc-text1 {
+      margin-top: 50px;
+      display: unset;
+    }
+
+    .nowosc-text2 {
+      display: none;
+    }
+
+    .nowosc video {
+      width: 100%;
+    }
+
+    .nowosc .zobacz {
+      margin-bottom: 50px;
     }
 
     .na-lato {
